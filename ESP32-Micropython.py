@@ -45,10 +45,18 @@ def send_data(temperature, humidity, light, motion):
     }
     try:
         response = requests.post(UBIDOTS_URL, json=data, headers=HEADERS)
-        print("✅ Data Sent!")
+        print("✅ Data ke Ubidots terkirim!")
         print("Response:", response.text)
     except Exception as e:
-        print("❌ Failed to send data:", e)
+        print("❌ Gagal mengirim data ke Ubidots:", e)
+        
+    try:
+        response_flask = requests.post(FLASK_ENDPOINT, json=data)
+        print("✅ Data ke Flask terkirim!")
+        print("Response Flask:", response_flask.text)
+    except Exception as e:
+        print("❌ Gagal mengirim data ke Flask:", e)
+        
 FLASK_ENDPOINT = f"http://192.168.1.19:5000"
 while True:
     try:
