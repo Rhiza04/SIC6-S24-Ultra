@@ -12,8 +12,8 @@ dht_sensor = dht.DHT22(Pin(15))
 pir_sensor = Pin(35, Pin.IN) 
 
 DEVICE_ID = "esp32-sic6"
-WIFI_SSID = "Wokwi-GUEST"
-WIFI_PASSWORD = ""
+WIFI_SSID = "3R"
+WIFI_PASSWORD = "kc27baruga"
 TOKEN = "BBUS-eAU1dmQcS5okWqGT6RMayC0eBj3mzM"
 
 UBIDOTS_URL = "https://stem.ubidots.com/api/v1.6/devices/" + DEVICE_ID
