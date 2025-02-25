@@ -40,7 +40,7 @@ def send_data(temperature, humidity, light, motion):
     data = {
         "temperature": {"value": temperature},
         "humidity": {"value": humidity},
-        "ldr_value": {"value": light},
+        "light": {"value": ldr_value},
         "motion": {"value": motion}
     }
     try:
